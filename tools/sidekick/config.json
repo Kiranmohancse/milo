@@ -110,10 +110,10 @@
     },
     {
       "containerId": "tools",
-      "title": "Tag Selector",
+      "title": "Select Tags",
       "id": "tag-selector",
       "environments": ["edit"],
-      "url": "https://milo.adobe.com/tools/tag-selector",
+      "url": "https://main--milo--kiranmohancse.hlx.page/tools/tag-selector",
       "isPalette": true,
       "paletteRect": "top: 150px; left: 7%; height: 675px; width: 85vw;"
     },
