@@ -100,7 +100,7 @@ const TagSelector = ({ consumerUrls = [] }) => {
       });
     };
 
-    fetchCasS();
+    //fetchCasS();
     fetchConsumer();
   }, [consumerUrls]);
 
