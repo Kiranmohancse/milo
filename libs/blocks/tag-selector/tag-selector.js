@@ -196,11 +196,7 @@ const TagSelector = ({ consumerUrls = [] }) => {
 
   return html`
     <section class="tag-selector-sources">
-      <div class="col">
-        <div class="tagselect-item ${selected === CAAS_LABEL ? 'expanded' : ''}">
-          <button class="has-children" data-tag="${CAAS_LABEL}" onClick=${setTag}>CaaS Tags</button>
-        </div>
-      </div>
+      
       ${consumerUrls.map(({ title }) => html`
         <div class="col">
           <div class="tagselect-item ${selected === title ? 'expanded' : ''}">
