@@ -6,12 +6,21 @@ export default function decorate(block) {
   [...block.children].forEach((row,r)=>{
      [...row.children].forEach((col,i)=>{
           if(i==0) {
+            /** 
               const linkButton = document.createElement('button');
               linkButton.classList.add('showAssetbtn');
               linkButton.setAttribute("id", r);
               const node = document.createTextNode(col.innerHTML);
               linkButton.append(node);
               col.replaceWith(linkButton);
+            **/  
+              const fetchCall = fetch(assetlink);
+              fetchCall
+              .then((response) => response.json())
+              .then((data) => {
+                  populateAssets(data.results);
+              });
+
           } else {
               col.classList.add("assetDataList");
           }
@@ -19,7 +28,8 @@ export default function decorate(block) {
   });
   document.getElementsByClassName('assetslist')[0].setAttribute('align','center');
 
-  document.getElementsByClassName('assetslist')[0].addEventListener('click', (event)=>{
+  /**
+   * document.getElementsByClassName('assetslist')[0].addEventListener('click', (event)=>{
       if(event.target.classList.value == "showAssetbtn") {
           const fetchCall = fetch(assetlink);
           
@@ -30,6 +40,7 @@ export default function decorate(block) {
               });
       }
   });
+  **/
 
   function populateAssets(results) {
       var assetsSection = document.createElement('div');
