@@ -24,7 +24,7 @@
 .marquee.mobile-light,
 .marquee.quiet:not(.dark),
 .marquee.inline {
-  color: var(--text-color);
+  color: #fff;
 }
 
 .marquee.mobile-dark {
